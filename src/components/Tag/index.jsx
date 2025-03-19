@@ -1,19 +1,45 @@
-// import React, { useState, useEffect } from 'react';
-// import { FiPlus, FiX } from 'react-icons/fi'
+import React, { useState, useEffect } from 'react';
+import { FiPlus, FiX } from 'react-icons/fi'
 import { Container } from "./styles";
 
-export function Tag({...rest }) {
+export function Tag({ isNew, value, onClick, ...rest }) {
+
+
+  const [inputWidth, setInputWidth] = useState(`${value.length * 1}rem`);
+
+  useEffect(() => {
+    adjustInputWidth(value);
+  }, [value]);
+
+  const adjustInputWidth = (inputValue) => {
+    setInputWidth(`${inputValue.length * 1}rem`);
+  };
+
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    adjustInputWidth(inputValue);
+  };
+
+
+
 
   return (
     <Container >
       <input
-        type="text"
-        {...rest}
+         type="text"
+         value={value}
+         readOnly={!isNew}
+         onChange={handleInputChange}
+         style={{ width: inputWidth }}
+         {...rest}
       />
-      <button type="button"> 
-        {/* {isNew ? <FiPlus /> : <FiX />} */}
+
+      <button type="button" onClick={onClick}> 
+        {isNew ? <FiPlus /> : <FiX />}
       </button>
+
     </Container>
   );
 }
+
 

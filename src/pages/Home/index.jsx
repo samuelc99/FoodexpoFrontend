@@ -1,3 +1,5 @@
+
+
 import imgCookie from '../../assets/banner.png'
 
 import { Header } from '../../components/Header'
@@ -7,6 +9,9 @@ import { Footer } from '../../components/Footer'
 import { Container, Content} from './styles'
 
 export function Home() {
+
+
+
 return(
   <Container>
     <Header/>
@@ -24,11 +29,11 @@ return(
       </Section>
 
       <Section title="Sobremesas"> 
-          <Carousel/>
+          {/* <Carousel/> */}
       </Section>
 
       <Section title="Bebidas"> 
-          <Carousel/>
+          {/* <Carousel/> */}
       </Section>
   
       </Content>

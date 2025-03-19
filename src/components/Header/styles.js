@@ -22,6 +22,7 @@ padding: 0 12.3rem;
     fill: none;
     width: 3.2rem;
     height: 3.2rem;
+    cursor: pointer;
 }
 
 .input {

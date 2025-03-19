@@ -43,7 +43,7 @@ gap: 3.2rem;
 `
 
 
-export const ImageNameCategory = styled.form`
+export const ImageNameCategory = styled.div`
     display: flex;
     gap: 3.2rem;
 
@@ -94,7 +94,7 @@ span {
 
 `
 
-export const IngredientsPrice = styled.form`
+export const IngredientsPrice = styled.div`
 display: flex;
 gap: 3.2rem;
 
@@ -121,5 +121,17 @@ span {
     gap: 1.6rem;
     padding: 8px;
 }
+
+/* .tagFarm {
+    position: relative;
+    display: flex;
+}
+
+.tagFarm svg{
+    position: absolute;
+    top: 8px;
+    left: 11rem;
+    cursor: pointer;
+} */
 
 `
